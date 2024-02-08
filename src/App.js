@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import requests from "./Requests";
+import Row from "./Row";
+import Banner from "./Banner";
+import Nav from "./Nav";
+import Preloader from "./Preloader";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Preloader />
+
+    <div className="app">
+      <Nav />
+      <Banner />
+
+      <Row 
+        title="Trending Now" 
+        fetchUrl={requests.fetchTrending}
+        isLargeRow 
+      />
+      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
+      <Row title="Star Wars Collection" fetchUrl={requests.fetchStarWarsMoviesAndSeries}  />
+      <Row title="Doctor Who Collection" fetchUrl={requests.fetchDoctorWhoSeries}  />
+      <Row title="Thriller Movies" fetchUrl={requests.fetchThrillerMovies} />
+      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
+      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+      <Row title="Sci-Fi Movies" fetchUrl={requests.fetchSciFiMovies} />
+      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
     </div>
+    </>
   );
 }
 

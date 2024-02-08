@@ -11,3 +11,89 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1{
+  font-family: Georgia, serif;
+}
+
+h2, h3 {
+  font-family: 'Gill Sans', sans-serif;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.dropdown_menu{
+  position: absolute;
+  top: 75px;
+  right: 50px;
+  background-color: #111;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 170px;
+}
+
+.dropdown_menu::before{
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 8px;
+  height: 20px;
+  width: 20px;
+  background-color: #111;
+  transform: rotate(45deg);
+}
+
+.dropdown_menu.active{
+  opacity: 0.9;
+  visibility: visible;
+  transform: translateY(0);
+  transition: 0.5s ease;
+}
+
+.dropdown_menu.inactive{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-0.5rem);
+  transition: 0.2s ease;
+}
+
+h3 {
+  font-size: 1rem;
+  padding: 20px 0;
+  font-weight: 500;
+  color: white;
+  line-height: 1.5rem;
+}
+
+h3:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.dropdown_menu .menu{
+  font-size: 1rem;
+  padding: 0px 0 10px 10px;
+  font-weight: 500;
+  color: white;
+  line-height: 1.5rem;
+}
+
+.menu li{
+  padding-top: 15px;
+  display: flex;
+}
+
+.menu li svg{
+  margin-right: 10px;
+}
+
+.menu li:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
