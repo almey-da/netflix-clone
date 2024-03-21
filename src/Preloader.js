@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react"
 import "./Preloader.css"
+import logo from "./logo.png";
 
 const Preloader = () => {
 
@@ -17,8 +18,8 @@ const Preloader = () => {
         <div className="spinner">
             <img 
             className="netflix-logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_N_logo.svg/256px-Netflix_2015_N_logo.svg.png" 
-            alt="Netflix Logo"  
+            src={logo} 
+            alt="mey logo"  
             />
         </div>
     </div>

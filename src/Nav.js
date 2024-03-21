@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./Nav.css";
 import { FaQuestionCircle, FaUser, FaEdit, FaCog } from "react-icons/fa";
+import logo from "./logo.png";
 
 function Nav() {
 
@@ -23,7 +24,7 @@ function Nav() {
   return (
     <div className={`nav ${show && "nav_black"}`}>
         <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
+            src={logo} 
             alt="netflix_logo" 
             className="nav_logo" 
         />
@@ -44,7 +45,7 @@ function Nav() {
                     <li><FaQuestionCircle />Help Center</li>
                     <li><FaCog />Settings</li>
                 </ul>
-                <h3 style={{textAlign: "center"}}>Sign Out of Netflix</h3>
+                <h3 style={{textAlign: "center"}}>Sign Out of MEY Site</h3>
             </div>
         </div>
     </div>
